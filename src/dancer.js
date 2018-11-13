@@ -1,5 +1,5 @@
 // PSEUDOCLASSICAL VERSION
-const makeDancer = function(top, left, timeBetweenSteps) {
+const Dancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   this.timeBetweenSteps = timeBetweenSteps;
 
@@ -8,10 +8,10 @@ const makeDancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
 
 };
-makeDancer.prototype.step = function () {
+Dancer.prototype.step = function () {
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
-makeDancer.prototype.setPosition = function(top, left) {
+Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top,
     left: left
